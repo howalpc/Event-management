@@ -3,242 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>contact us</title>
+    <title>Document</title>
 </head>
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap");
-$color-gray: #515151;
-$color-black: #000;
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
+  width: 100%;
+  height: auto;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+			background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('https://images.unsplash.com/photo-1514890084135-f16d926f4d03?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc4NzU4NzE&ixlib=rb-1.2.1&q=80');
+			background-repeat: no-repeat;
+			background-size: cover;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.2rem;
+			line-height: 1.618;
+			color: rgb(255, 255, 255);
+		}
+
+h1 {
+  font-size: 2rem;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
 }
 
-.form-main {
-  background: linear-gradient(to bottom, #00000024, #00000024),
-    url(https://res.cloudinary.com/dqifboxk5/image/upload/v1686209968/contact-us-2_y8zzx7.jpg)
-      no-repeat center;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  .main-wrapper {
-    border-radius: 10px;
-    padding: 45px;
-    width: 40%;
-    box-shadow: 0 0 5px 5px #00000020;
-    backdrop-filter: blur(5px);
-    background-color: #ffffff85;
-    @media screen and (max-width: 991px) {
-      width: 70%;
-    }
-    @media screen and (max-width: 767px) {
-      width: 90%;
-    }
-    .form-head {
-      font-size: 30px;
-      line-height: 40px;
-      font-weight: 600;
-      text-align: center;
-      margin: 0px 0 25px;
-    }
-    .form-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 15px;
-      .form-card {
-        position: relative;
-        width: 100%;
-
-        .form-input {
-          padding: 20px 25px 15px;
-          width: 100%;
-          border: 1px solid $color-black;
-          border-radius: 5px;
-          background: transparent;
-          outline: none;
-          font-size: 20px;
-          line-height: 30px;
-          font-weight: 400;
-              box-sizing: border-box;
-
-          &:valid,
-          &:focus {
-            border: 1px solid $color-gray;
-          }
-
-          &:valid ~ .form-label,
-          &:focus ~ .form-label {
-            color: $color-gray;
-            top: 30%;
-            transform: translateY(-70%);
-            font-size: 13px;
-            line-height: 23px;
-          }
-
-          &:-webkit-autofill,
-          &:-webkit-autofill:hover,
-          &:-webkit-autofill:focus,
-          &:-webkit-autofill:active {
-            transition: background-color 9999s ease-in-out 0s;
-          }
-          &::-webkit-outer-spin-button,
-          &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-        }
-
-        .form-label {
-          position: absolute;
-          left: 25px;
-          top: 50%;
-          transform: translateY(-50%);
-          pointer-events: none;
-          transition: 0.3s;
-          margin: 0;
-          font-size: 18px;
-          line-height: 28px;
-          font-weight: 500;
-        }
-        .form-textarea {
-          padding: 20px 25px 15px;
-          width: 100%;
-          border: 1px solid $color-black;
-          border-radius: 5px;
-          background: transparent;
-          outline: none;
-          font-size: 20px;
-          line-height: 30px;
-          font-weight: 400;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          resize: none;
-              box-sizing: border-box;
-
-          &:valid,
-          &:focus {
-            border: 1px solid $color-gray;
-          }
-
-          &:valid ~ .form-textarea-label,
-          &:focus ~ .form-textarea-label {
-            color: $color-gray;
-            top: 18%;
-            transform: translateY(-82%);
-            font-size: 13px;
-            line-height: 23px;
-          }
-
-          &:-webkit-autofill,
-          &:-webkit-autofill:hover,
-          &:-webkit-autofill:focus,
-          &:-webkit-autofill:active {
-            transition: background-color 9999s ease-in-out 0s;
-          }
-        }
-        .form-textarea-label {
-          position: absolute;
-          left: 25px;
-          top: 30%;
-          transform: translateY(-70%);
-          pointer-events: none;
-          transition: 0.3s;
-          margin: 0;
-          font-size: 18px;
-          line-height: 28px;
-          font-weight: 500;
-        }
-      }
-    }
-  }
+h1, p {
+  margin: 1em auto;
+  text-align: center;
 }
-.btn-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-padding: 16px 0 0;
-  }
-.btn-wrap button {
-  padding: 0 32px;
-  font-size: 18px;
-  line-height: 48px;
-  border: 1px solid transparent;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.5s ease;
-  cursor: pointer; box-shadow: 0 0 5px 5px #00000020;
+
+form {
+  width: 60vw;
+	max-width: 500px;
+	min-width: 300px;
+	margin: 0 auto;
+  padding-bottom: 2em;
 }
-.btn-wrap button:hover {
-  border: 1px solid #000;
-  background: transparent;
-  
+
+fieldset {
+  border: none;
+  padding: 1.2rem 0;
+}
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+	margin: 0.5rem 0;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input,
+textarea,
+select {
+  margin: 7px 0 0 15px;
+	width: 100%;
+  min-height: 2em;
+}
+
+select, .room {
+			width: 7rem;
+      padding: 5px;
+			border: none;
+			background-color: rgba(255, 255, 255);
+      box-shadow: rgba(0,0,0,.1) 0 0 8px;			
+		}
+select {           
+			position: relative;
+      border-radius: 5px;
+      display: inline-block;
+		}
+
+input, textarea {
+  border: none;
+  border-radius: 5px;
+  color: rgba(10, 10, 35, 0.7);
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+  color: inherit;
 }
 
 </style>
 <body>
     
 
-<div class="form-main">
-    <div class="main-wrapper">
-      <h2 class="form-head">Contact From</h2>
-      <form class="form-wrapper">
-        <div class="form-card">
-          <input
-            class="form-input"
-            type="text"
-            name="full_name"
-            required="required"
-          />
-          <label class="form-label" for="full_name">Full Name</label>
-        </div>
-
-        <div class="form-card">
-          <input
-            class="form-input"
-            type="email"
-            name="email"
-            required="required"
-          />
-          <label class="form-label" for="email">Email</label>
-        </div>
-
-        <div class="form-card">
-          <input
-            class="form-input"
-            type="number"
-            name="phone_number"
-            required="required"
-          />
-          <label class="form-label" for="phone_number">Phone number</label>
-        </div>
-
-        <div class="form-card">
-          <textarea
-            class="form-textarea"
-            maxlength="420"
-            rows="3"
-            name="phone_number"
-            required="required"
-          ></textarea>
-          <label class="form-textarea-label" for="phone_number"
-            >Address</label
-          >
-        </div>
-        <div class="btn-wrap">
-          <button> Submit </button>
-        </div>
-      </form>
-    </div>
-  </div>
+<body>
+    <h1>Booking Online Now</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action="">
+      
+      <fieldset>
+        <label>First Name 
+          <input type="text" name="firstname" required /></label>
+        <label>Last Name 
+        <input type="text" name="lastname" required />
+        </label>
+        <label>Email
+        <input type="email" name="email" required />
+        </label>
+        <label>Phone Number 
+        <input type="text" name="phone" required />
+        </label>
+        
+        <label>Check-in Date
+        <input type="date" name="check-in-date" required />
+        </label>
+        <label>Check-out Date
+        <input type="date" name="check-out-date" required />
+        </label>
+         </fieldset>
+      <fieldset>
+        <label> Accomodation Type
+        <select name="accomodation">
+              <option value="">(select one)</option>
+              <option value="1">Hotel</option>
+              <option value="2">Self-Catered</option>
+              <option value="3">Hostel</option>
+              <option value="4">Guesthouse</option>
+            </select>
+        </label><br>
+     
+        <label>Number of room <input type="number" name="age" min="1" max="120" class="room"/><br><br>
+          <label>Room Type
+          <label><input type="radio" name="room-type" class="inline" /> Single Room</label>
+          <label><input type="radio" name="room-type" class="inline" /> Double Room</label>
+          <label><input type="radio" name="room-type" class="inline" /> Triple Room</label>
+          <label><input type="radio" name="room-type" class="inline" /> Quad Bedroom</label>
+                </label>
+        </label><br>
+        <label>Additional Requests
+        <textarea name="additional" rows="5" cols="30" placeholder="Your message ..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </body>
 </html>
